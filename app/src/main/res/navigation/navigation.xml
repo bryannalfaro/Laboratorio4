@@ -23,12 +23,19 @@
         <argument
             android:name="place"
             app:argType="string" />
+        <action
+            android:id="@+id/action_places_to_principal"
+            app:destination="@id/principal" />
     </fragment>
     <fragment
         android:id="@+id/comentario"
         android:name="com.example.laboratorio4.Comentario"
         android:label="fragment_comentario"
-        tools:layout="@layout/fragment_comentario" />
+        tools:layout="@layout/fragment_comentario" >
+        <action
+            android:id="@+id/action_comentario_to_places2"
+            app:destination="@id/places" />
+    </fragment>
     <fragment
         android:id="@+id/acercaDe"
         android:name="com.example.laboratorio4.AcercaDe"

@@ -39,6 +39,7 @@ class Places : Fragment() {
         binding2.button5.setOnClickListener {
 
             var comment:String=binding2.editText.text.toString()
+            binding2.editText.setText("")
             var bundle1= bundleOf("comentario" to comment)
             view!!.findNavController().navigate(R.id.action_places_to_comentario,bundle1)
 
