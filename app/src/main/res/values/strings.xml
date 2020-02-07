@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Laboratorio4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="image_here">Imagen aqui</string>
+    <string name="nombre">Nombre</string>
+    <string name="esta_app">La ciudad de Guatemala es la capital del país conocido como "país de la eterna primavera", su verdadero nombre es "Nueva Guatemala de la Asunción". Es una ciudad con mucha cultura, lugares hermosos y gente muy amable.\n\
+    \n\Esta app esta realizada con el proposito de que puedas conocer un poco sobre los principales lugares turisticos que Guatemala ofrece y poder visitarlos y pasar un buen momento.\n</string>
+    <string name="tikal">Tikal</string>
+    <string name="antigua">Antigua</string>
+    <string name="semuc">Semuc</string>
+    <string name="comentar">Comentar</string>
+    <string name="comentario">Comentario</string>
+</resources>
