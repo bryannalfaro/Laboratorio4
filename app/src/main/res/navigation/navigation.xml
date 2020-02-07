@@ -8,5 +8,29 @@
     <fragment
         android:id="@+id/principal"
         android:name="com.example.laboratorio4.Principal"
-        android:label="Principal" />
+        android:label="Principal" >
+        <action
+            android:id="@+id/action_principal_to_places"
+            app:destination="@id/places" />
+    </fragment>
+    <fragment
+        android:id="@+id/places"
+        android:name="com.example.laboratorio4.Places"
+        android:label="Places" >
+        <action
+            android:id="@+id/action_places_to_comentario"
+            app:destination="@id/comentario" />
+        <argument
+            android:name="place"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/comentario"
+        android:name="com.example.laboratorio4.Comentario"
+        android:label="fragment_comentario"
+        tools:layout="@layout/fragment_comentario" />
+    <fragment
+        android:id="@+id/acercaDe"
+        android:name="com.example.laboratorio4.AcercaDe"
+        android:label="AcercaDe" />
 </navigation>

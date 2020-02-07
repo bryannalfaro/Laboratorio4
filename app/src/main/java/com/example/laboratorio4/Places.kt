@@ -1,6 +1,7 @@
 package com.example.laboratorio4
 
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,10 +20,38 @@ class Places : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentPlacesBinding>(
+        val binding2 = DataBindingUtil.inflate<FragmentPlacesBinding>(
             inflater, R.layout.fragment_places, container, false)
 
-        return binding.root
+        val prueba =Modelo(getString(R.string.tikal), getString(R.string.phrase1),getString(
+            R.string.descripcion1
+        ))
+        val prueba1=Modelo(getString(R.string.antigua), getString(R.string.phrase2),getString(
+            R.string.descripcion2
+        ))
+        val prueba2=Modelo(getString(R.string.semuc), getString(R.string.phrase3),getString(
+            R.string.descripcion3
+        ))
+
+        //Comment button
+        binding2.button5.setOnClickListener {
+
+        }
+        //Get the data from the other activity
+        val string: String? = arguments?.getString("lugar")
+
+
+        //Evaluates the data
+        if (string.equals("Tikal")){
+            binding2.modelo=prueba
+
+        }else if (string.equals("Antigua")){
+            binding2.modelo=prueba1
+        }else if(string.equals("Semuc")){
+            binding2.modelo=prueba2
+        }
+
+        return binding2.root
     }
 
 

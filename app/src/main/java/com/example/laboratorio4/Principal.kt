@@ -3,12 +3,15 @@ package com.example.laboratorio4
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
+
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.laboratorio4.databinding.FragmentPrincipalBinding
 
 /**
@@ -22,7 +25,8 @@ class Principal : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View? {var place:String="Tikal"
+
         // Inflate the layout for this fragment
 
         val binding1 = DataBindingUtil.inflate<FragmentPrincipalBinding>(
@@ -46,40 +50,49 @@ class Principal : Fragment() {
                 tester=true
             }
         }
+
+        binding1.tikalButton
+        binding1.tikalButton.setOnClickListener {
+            //val intent = Intent(activity, Places::class.java)
+            //intent.putExtra("boton6","Tikal")
+            var placess:String="Tikal"
+            var bundle= bundleOf("lugar" to placess)
+            view!!.findNavController().navigate(R.id.action_principal_to_places,bundle)
+
+        }
+        binding1.antiguaButton
+        binding1.antiguaButton.setOnClickListener {
+            //val intent = Intent(activity, Places::class.java)
+           // intent.putExtra("boton7","Antigua")
+            var places2:String="Antigua"
+            var bundle= bundleOf("lugar" to places2)
+            view!!.findNavController().navigate(R.id.action_principal_to_places,bundle)
+
+
+        }
+        binding1.semucButton
+        binding1.semucButton.setOnClickListener {
+
+            //val intent = Intent(activity, Places::class.java)
+            //intent.putExtra("boton8","Semuc")
+            //startActivity(intent)
+            var places3:String="Semuc"
+            var bundle= bundleOf("lugar" to places3)
+            view!!.findNavController().navigate(R.id.action_principal_to_places,bundle)
+
+
+        }
+        setHasOptionsMenu(true)
         return binding1.root
-
-
-
-//        binding.tikalButton
-//        binding.tikalButton.setOnClickListener {
-//            val intent = Intent(this, Places::class.java)
-//            intent.putExtra("boton6","Tikal")
-//
-//            startActivity(intent)
-//
-//        }
-//        binding.antiguaButton
-//        binding.antiguaButton.setOnClickListener {
-//            val intent = Intent(this, Places::class.java)
-//            intent.putExtra("boton7","Antigua")
-//
-//            startActivity(intent)
-//
-//        }
-//        binding.semucButton
-//        binding.semucButton.setOnClickListener {
-//
-//            val intent = Intent(this, Places::class.java)
-//            intent.putExtra("boton8","Semuc")
-//
-//            startActivity(intent)
-//
-//        }
-
-
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.overflow_menu,menu)
+    }
 
-
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,view!!.findNavController())||
+        super.onOptionsItemSelected(item)
+    }
 }
