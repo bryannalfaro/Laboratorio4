@@ -7,7 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.laboratorio4.databinding.FragmentPlacesBinding
 
 /**
@@ -35,6 +37,10 @@ class Places : Fragment() {
 
         //Comment button
         binding2.button5.setOnClickListener {
+
+            var comment:String=binding2.editText.text.toString()
+            var bundle1= bundleOf("comentario" to comment)
+            view!!.findNavController().navigate(R.id.action_places_to_comentario,bundle1)
 
         }
         //Get the data from the other activity
