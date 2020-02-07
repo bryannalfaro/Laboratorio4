@@ -9,7 +9,7 @@
         android:id="@+id/imageView2"
         android:layout_width="194dp"
         android:layout_height="202dp"
-        android:src="@drawable/35160598_2134527843444981_399717887385796608_o"
+        android:src="@drawable/foto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
