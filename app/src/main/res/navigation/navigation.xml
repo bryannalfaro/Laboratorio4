@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/principal"
-        android:name="com.example.laboratorio4.Principal"
+        android:name="com.example.laboratorio4.fragments.Principal"
         android:label="Principal" >
         <action
             android:id="@+id/action_principal_to_places"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/places"
-        android:name="com.example.laboratorio4.Places"
+        android:name="com.example.laboratorio4.fragments.Places"
         android:label="Places" >
         <action
             android:id="@+id/action_places_to_comentario"
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/comentario"
-        android:name="com.example.laboratorio4.Comentario"
+        android:name="com.example.laboratorio4.fragments.Comentario"
         android:label="fragment_comentario"
         tools:layout="@layout/fragment_comentario" >
         <action
@@ -38,6 +38,6 @@
     </fragment>
     <fragment
         android:id="@+id/acercaDe"
-        android:name="com.example.laboratorio4.AcercaDe"
+        android:name="com.example.laboratorio4.fragments.AcercaDe"
         android:label="AcercaDe" />
 </navigation>

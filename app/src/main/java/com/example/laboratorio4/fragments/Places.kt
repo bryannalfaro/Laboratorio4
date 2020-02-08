@@ -1,7 +1,6 @@
-package com.example.laboratorio4
+package com.example.laboratorio4.fragments
 
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.laboratorio4.models.Modelo
+import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentPlacesBinding
 
 /**
@@ -25,15 +26,27 @@ class Places : Fragment() {
         val binding2 = DataBindingUtil.inflate<FragmentPlacesBinding>(
             inflater, R.layout.fragment_places, container, false)
 
-        val prueba =Modelo(getString(R.string.tikal), getString(R.string.phrase1),getString(
-            R.string.descripcion1
-        ))
-        val prueba1=Modelo(getString(R.string.antigua), getString(R.string.phrase2),getString(
-            R.string.descripcion2
-        ))
-        val prueba2=Modelo(getString(R.string.semuc), getString(R.string.phrase3),getString(
-            R.string.descripcion3
-        ))
+        val prueba = Modelo(
+            getString(R.string.tikal),
+            getString(R.string.phrase1),
+            getString(
+                R.string.descripcion1
+            )
+        )
+        val prueba1= Modelo(
+            getString(R.string.antigua),
+            getString(R.string.phrase2),
+            getString(
+                R.string.descripcion2
+            )
+        )
+        val prueba2= Modelo(
+            getString(R.string.semuc),
+            getString(R.string.phrase3),
+            getString(
+                R.string.descripcion3
+            )
+        )
 
         //Comment button
         binding2.button5.setOnClickListener {

@@ -32,6 +32,12 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@android:color/background_dark</item>
     </style>
+    <style name="CommentStyle">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">Roboto</item>
+        <item name="android:textSize">14sp</item>
+
+    </style>
 
 
 
