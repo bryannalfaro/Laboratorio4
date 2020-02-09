@@ -14,7 +14,8 @@ import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentPlacesBinding
 
 /**
- * A simple [Fragment] subclass.
+ * @author Bryann Alfaro
+ * @since February 29, 2020
  */
 class Places : Fragment() {
 
@@ -25,7 +26,7 @@ class Places : Fragment() {
         // Inflate the layout for this fragment
         val binding2 = DataBindingUtil.inflate<FragmentPlacesBinding>(
             inflater, R.layout.fragment_places, container, false)
-
+        //Make the models for the buttons
         val prueba = Modelo(
             getString(R.string.tikal),
             getString(R.string.phrase1),

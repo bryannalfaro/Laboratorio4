@@ -9,7 +9,8 @@ import android.view.ViewGroup
 import com.example.laboratorio4.R
 
 /**
- * A simple [Fragment] subclass.
+ * @author Bryann Alfaro
+ * @since February 29, 2020
  */
 class AcercaDe : Fragment() {
 

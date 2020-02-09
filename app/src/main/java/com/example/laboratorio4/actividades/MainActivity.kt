@@ -14,7 +14,10 @@ import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.ActivityMainBinding
 import com.example.laboratorio4.fragments.Places
 
-
+/**
+ * @author Bryann Alfaro
+ * @since 29, February 2020
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,12 +25,13 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,
             R.layout.activity_main
         )
+        //Create the intent for the deeplink
         var intent:Intent=intent
 
         //Comprobate if the intent is not null or the data
         if (intent!=null && intent.data!=null){
             val params = intent.data!!.getPathSegments()//get the params
-            val first = params[0]//Get the first params
+            val first = params[0]//Get the first param
             if (first.equals("Antigua")){
                 var places2:String="Antigua"
                 var bundle= bundleOf("lugar" to places2)

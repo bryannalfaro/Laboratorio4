@@ -10,7 +10,8 @@ import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentComentarioBinding
 
 /**
- * A simple [Fragment] subclass.
+ * @author Bryann Alfaro
+ * @since February 29, 2020
  */
 class Comentario : Fragment() {
 
@@ -22,11 +23,11 @@ class Comentario : Fragment() {
         val binding3 = DataBindingUtil.inflate<FragmentComentarioBinding>(
             inflater, R.layout.fragment_comentario, container, false)
 
+        //Get the comment
         val string: String? = arguments?.getString("comentario")
         binding3.comment.setText(string)
         //Get the options for the menu
         setHasOptionsMenu(true)
-
 
         // Inflate the layout for this fragment
         return binding3.root
@@ -47,13 +48,9 @@ class Comentario : Fragment() {
         return shareIntent
     }
 
-    private fun shareSuccess(){
-        startActivity(getShareIntent())
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item!!.itemId){
-            R.id.shareButton ->shareSuccess()
+            R.id.shareButton ->startActivity(getShareIntent())
         }
         return super.onOptionsItemSelected(item)
     }

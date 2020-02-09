@@ -11,9 +11,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.laboratorio4.R
 import com.example.laboratorio4.databinding.FragmentPrincipalBinding
-
 /**
- * A simple [Fragment] subclass.
+ * @author Bryann Alfaro
+ * @since February 29, 2020
  */
 class Principal : Fragment() {
 
